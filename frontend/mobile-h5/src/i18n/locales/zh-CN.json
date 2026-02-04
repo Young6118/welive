@@ -1,0 +1,101 @@
+{
+  "common": {
+    "confirm": "确定",
+    "cancel": "取消",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "loading": "加载中...",
+    "noMore": "没有更多了",
+    "pullToRefresh": "下拉刷新",
+    "releaseToRefresh": "释放刷新"
+  },
+  "nav": {
+    "home": "首页",
+    "notes": "笔记",
+    "chat": "聊天",
+    "discover": "发现",
+    "profile": "我的"
+  },
+  "home": {
+    "title": "首页",
+    "hotQuestions": "热门问答",
+    "latestNotes": "最新笔记",
+    "recommendedVillages": "推荐村落",
+    "viewAll": "查看全部",
+    "askQuestion": "提问",
+    "writeNote": "写笔记"
+  },
+  "notes": {
+    "title": "笔记",
+    "myNotes": "我的笔记",
+    "createNote": "创建笔记",
+    "editNote": "编辑笔记",
+    "categories": "分类",
+    "all": "全部"
+  },
+  "chat": {
+    "title": "聊天",
+    "aiAssistant": "AI助手",
+    "inputPlaceholder": "输入消息...",
+    "send": "发送"
+  },
+  "discover": {
+    "title": "发现",
+    "searchPlaceholder": "搜索村落、话题...",
+    "hotVillages": "热门村落",
+    "hotPosts": "热门帖子",
+    "members": "人"
+  },
+  "profile": {
+    "title": "我的",
+    "notLoggedIn": "未登录",
+    "editBio": "点击编辑个人简介",
+    "following": "关注",
+    "followers": "粉丝",
+    "likes": "获赞",
+    "myQuestions": "我的问题",
+    "myNotes": "我的笔记",
+    "myFavorites": "我的收藏",
+    "myVillages": "我的村落",
+    "settings": "设置",
+    "about": "关于",
+    "logout": "退出登录",
+    "logoutConfirm": "确定要退出登录吗？"
+  },
+  "settings": {
+    "title": "设置",
+    "appearance": "外观",
+    "theme": "主题模式",
+    "themeLight": "浅色模式",
+    "themeDark": "深色模式",
+    "themeAuto": "跟随系统",
+    "language": "语言",
+    "languageZh": "简体中文",
+    "languageEn": "English",
+    "other": "其他",
+    "clearCache": "清除缓存",
+    "aboutUs": "关于我们",
+    "version": "版本",
+    "cacheCleared": "缓存已清除",
+    "themeUpdated": "主题已更新",
+    "languageUpdated": "语言已更新"
+  },
+  "auth": {
+    "login": "登录",
+    "register": "注册",
+    "username": "用户名",
+    "password": "密码",
+    "confirmPassword": "确认密码",
+    "email": "邮箱",
+    "loginSuccess": "登录成功",
+    "registerSuccess": "注册成功",
+    "logoutSuccess": "已退出登录",
+    "usernamePlaceholder": "请输入用户名",
+    "passwordPlaceholder": "请输入密码",
+    "noAccount": "还没有账号？",
+    "hasAccount": "已有账号？",
+    "goRegister": "去注册",
+    "goLogin": "去登录"
+  }
+}

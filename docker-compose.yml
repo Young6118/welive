@@ -1,0 +1,89 @@
+version: '3.8'
+
+services:
+  # MySQL数据库
+  mysql:
+    image: mysql:8.0
+    container_name: ai-egg-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: ai_egg
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - ai-egg-network
+
+  # Redis缓存
+  redis:
+    image: redis:7-alpine
+    container_name: ai-egg-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - ai-egg-network
+
+  # 应用服务
+  app-service:
+    build:
+      context: ./backend/app-service
+      dockerfile: Dockerfile
+    container_name: ai-egg-app-service
+    environment:
+      - SERVER_PORT=8080
+      - MYSQL_HOST=mysql
+      - MYSQL_PORT=3306
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root_password
+      - MYSQL_DATABASE=ai_egg
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+      - redis
+    networks:
+      - ai-egg-network
+
+  # 推荐算法服务
+  recommendation-service:
+    build:
+      context: ./backend/recommendation-service
+      dockerfile: Dockerfile
+    container_name: ai-egg-recommendation-service
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+    networks:
+      - ai-egg-network
+
+  # 前端H5应用
+  frontend:
+    build:
+      context: ./frontend/mobile-h5
+      dockerfile: Dockerfile
+    container_name: ai-egg-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - app-service
+    networks:
+      - ai-egg-network
+
+volumes:
+  mysql_data:
+  redis_data:
+
+networks:
+  ai-egg-network:
+    driver: bridge

@@ -1,0 +1,101 @@
+{
+  "common": {
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading...",
+    "noMore": "No more",
+    "pullToRefresh": "Pull to refresh",
+    "releaseToRefresh": "Release to refresh"
+  },
+  "nav": {
+    "home": "Home",
+    "notes": "Notes",
+    "chat": "Chat",
+    "discover": "Discover",
+    "profile": "Profile"
+  },
+  "home": {
+    "title": "Home",
+    "hotQuestions": "Hot Questions",
+    "latestNotes": "Latest Notes",
+    "recommendedVillages": "Recommended Villages",
+    "viewAll": "View All",
+    "askQuestion": "Ask",
+    "writeNote": "Write Note"
+  },
+  "notes": {
+    "title": "Notes",
+    "myNotes": "My Notes",
+    "createNote": "Create Note",
+    "editNote": "Edit Note",
+    "categories": "Categories",
+    "all": "All"
+  },
+  "chat": {
+    "title": "Chat",
+    "aiAssistant": "AI Assistant",
+    "inputPlaceholder": "Type a message...",
+    "send": "Send"
+  },
+  "discover": {
+    "title": "Discover",
+    "searchPlaceholder": "Search villages, topics...",
+    "hotVillages": "Hot Villages",
+    "hotPosts": "Hot Posts",
+    "members": "members"
+  },
+  "profile": {
+    "title": "Profile",
+    "notLoggedIn": "Not logged in",
+    "editBio": "Tap to edit bio",
+    "following": "Following",
+    "followers": "Followers",
+    "likes": "Likes",
+    "myQuestions": "My Questions",
+    "myNotes": "My Notes",
+    "myFavorites": "My Favorites",
+    "myVillages": "My Villages",
+    "settings": "Settings",
+    "about": "About",
+    "logout": "Logout",
+    "logoutConfirm": "Are you sure you want to logout?"
+  },
+  "settings": {
+    "title": "Settings",
+    "appearance": "Appearance",
+    "theme": "Theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeAuto": "Auto",
+    "language": "Language",
+    "languageZh": "简体中文",
+    "languageEn": "English",
+    "other": "Other",
+    "clearCache": "Clear Cache",
+    "aboutUs": "About Us",
+    "version": "Version",
+    "cacheCleared": "Cache cleared",
+    "themeUpdated": "Theme updated",
+    "languageUpdated": "Language updated"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "username": "Username",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "email": "Email",
+    "loginSuccess": "Login successful",
+    "registerSuccess": "Register successful",
+    "logoutSuccess": "Logged out",
+    "usernamePlaceholder": "Enter username",
+    "passwordPlaceholder": "Enter password",
+    "noAccount": "No account?",
+    "hasAccount": "Already have an account?",
+    "goRegister": "Register",
+    "goLogin": "Login"
+  }
+}

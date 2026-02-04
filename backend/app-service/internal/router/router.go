@@ -73,6 +73,10 @@ func SetupRouter() *gin.Engine {
 		authorized.DELETE("/earth-village/:id/post/:postId", handler.DeletePost)
 		authorized.POST("/earth-village/:id/post/:postId/reply", handler.ReplyPost)
 		authorized.GET("/earth-village/:id/post/:postId/replies", handler.GetReplies)
+
+		// 搜索模块
+		authorized.GET("/search/questions", handler.SearchQuestions)
+		authorized.GET("/search/notes", handler.SearchNotes)
 	}
 
 	return r

@@ -65,3 +65,17 @@ type Post struct {
 func (Post) TableName() string {
 	return "posts"
 }
+
+// PostLike 帖子点赞模型
+type PostLike struct {
+	ID        uint      `gorm:"primarykey" json:"id"`
+	CreatedAt time.Time `json:"created_at"`
+
+	PostID uint `gorm:"not null;index" json:"post_id"`
+	UserID uint `gorm:"not null;index" json:"user_id"`
+}
+
+// TableName 指定表名
+func (PostLike) TableName() string {
+	return "post_likes"
+}

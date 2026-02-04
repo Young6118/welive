@@ -21,6 +21,7 @@ func main() {
 		&model.Answer{},
 		&model.QuestionLike{},
 		&model.Note{},
+		&model.NoteLike{},
 		&model.Comment{},
 		&model.CommentLike{},
 		&model.Chat{},
@@ -28,6 +29,7 @@ func main() {
 		&model.Village{},
 		&model.VillageMember{},
 		&model.Post{},
+		&model.PostLike{},
 	); err != nil {
 		log.Fatalf("Failed to migrate database: %v", err)
 	}

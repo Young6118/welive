@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { showToast } from 'vant'
 import { getQuestions, likeQuestion, unlikeQuestion } from '@/api/question'
+import { searchQuestions } from '@/api/search'
 import type { Question } from '@/types'
 
 const router = useRouter()
@@ -46,8 +47,31 @@ const onRefresh = (): void => {
   onLoad()
 }
 
-const onSearch = (): void => {
-  // TODO: 实现搜索
+const onSearch = async (): Promise<void> => {
+  if (!searchValue.value.trim()) {
+    // 如果搜索为空，重新加载默认列表
+    page.value = 1
+    questionList.value = []
+    finished.value = false
+    onLoad()
+    return
+  }
+
+  try {
+    loading.value = true
+    const res = await searchQuestions({
+      keyword: searchValue.value,
+      page: 1,
+      pageSize: 10
+    })
+    questionList.value = res.list
+    finished.value = true
+  } catch (error) {
+    console.error(error)
+    showToast('搜索失败')
+  } finally {
+    loading.value = false
+  }
 }
 
 const goToDetail = (id: number): void => {
